@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 3</title>
+</head>
+
+<body>
+
+
+    <form action="action_page.php" method="get" target="_blank">
+
+        <fieldset><!--To group related data in a form.-->
+            <legend> Private information</legend> <!--To define a caption-->
+            <!--using password button -->
+            <div>
+                <label for="p"> Password</label>
+                <input id="p" type="password" placeholder="enter your password" name="pass" required><br>
+            </div>
+           
+            <!-- using hidden button -->
+            <div>
+                <input type="hidden" name="az" value="23" formnovalidate> Hidden <br>
+            </div>
+            <!-- Using text button -->
+            <div>
+                <br><label for="e"> Email</label>
+                <input id="e" type="email" name="em" autocomplete="on" required>
+            </div>
+            <!-- using number button -->
+            <div>
+               <br> <label for="num"> Number </label>
+                <input  id="num" type="number" name="num"required placeholder="Numper ">
+            </div>
+            
+            <!--  Submit & reset-->
+            <div>
+            <input type="submit" name="p_info" value="Submit">
+            <input type="reset" value="Delete">
+        </div>
+
+
+        </fieldset>
+        <!--End -->
+
+        <fieldset>
+            <legend>public information:</legend>
+            <label for="fname">First name:</label><br>
+            <input id="fname" type="text" name="firstname" value="ali" maxlength="10">
+            <br>
+            <label for="ename"> Last name:</label><br>
+            <input id="ename" type="text" name="lastname" value="sami">
+            <br><br>
+        
+        </fieldset>
+
+        <!-- Another <filedst> -->
+        <fieldset>
+            <legend>Extra Things </legend>
+             <!--using range button  -->
+             <div>
+                <input id="Speed" type="range" name="Car"
+                value="40" 
+                min="0"
+                 max="100" 
+                step="20"
+                >
+                <label for="Speed">The speed of your car</label>
+                <br>
+            </div>
+            <!-- using radio button -->
+            <div>
+            <input id="re" type="radio" name="color" value="red">
+            <label for="re">Red</label>
+            </div>
+            <div>
+                <input id="wh" type="radio" name="color" value="White" checked>
+                <label for="wh">white</label>
+            </div>
+            <div>
+                <input id="bl" type="radio" name="color" value="Black">
+                <label for="bl">black</label>
+            </div>
+            <hr>
+            <!-- using checkbox button -->
+            <div>
+                <input id="re1" type="checkbox" name="color" value="red" checked>
+                <label for="re1">Red</label>
+            </div>
+            <div>
+                <input id="wh1" type="checkbox" name="color" value="White">
+                <label for="wh1">white</label>
+            </div>
+            <div>
+                <input id="bl1" type="checkbox" name="color" value="Black">
+                <label for="bl1">black</label>
+            </div>
+            <hr>
+            <!-- Using <option>  -->
+
+            <div> <label for="movie"> choose movie</label>
+
+                <select id="movie" name="movie" multiple>
+                    <optgroup label="Romantic">
+                        <option value="1">movie1</option>
+                        <option value="2">movie2</option>
+                        <option value="3">movie3</option>
+                    </optgroup>
+                    <optgroup label="Action">
+                        <option value="4" selected>movie3</option>
+                        <option value="5">movie4</option>
+                        <option value="6">movie5</option>
+                    </optgroup>
+                    <!--  -->
+                </select>
+            </div>
+            <br>
+            <hr>
+            <!-- using testarea element -->
+            <div>
+                <textarea name="test" cols="30" rows="10" disabled>test text</textarea>
+            </div>
+            <!-- using button element -->
+            <div>
+                <button type="button" onclick="alert('My Name is Ahmed')">show</button>
+            </div>
+            <!-- color button -->
+            <div>
+             <br>   <label for="co">color</label>
+                <input type="color" name="colo" id="co" >
+            </div>
+            <!-- Date  -->
+            <div>
+            <label >Date</label>
+            <input type="date">
+        </div>
+        <hr>
+        <!-- month -->
+        <div>
+            <label >month</label>
+            <input type="month">
+        </div>
+        <hr>
+        <!-- time -->
+        <div>
+            <label>Time</label>
+            <input type="time">
+        </div>
+
+
+            <!-- determine button -->
+            <div>
+                <label for="A"> determine</label>
+                <input type="datetime" name="det" id="A">
+            </div>
+            <!-- URL  button -->
+            <div>
+                <label>URL</label>
+                <input type="url">
+            </div>
+           
+        </div>
+        <hr>
+        <!--  Search button -->
+        <div>
+           <label> search</label>
+           <input type="search" >
+
+        </div>  
+        <hr>
+
+        
+        <!-- Datalist -->
+        <div>
+            <label for="programming">language</label>
+         <input list="programming" name="prog" autofocus>
+         <datalist id="programming">
+             <option value="C">
+             <option value="C++">
+             <option value="PHP">
+             <option value="JAVA">
+             <option value="Python">
+         </datalist>
+<!-- keygen -->
+     </div>
+     Username: <input type="text" name="user">
+Encryption: <keygen name="security">
+<input type="submit" autofocus>
+
+        </fieldset>
+
+    </form>
+<!--  oinput -->
+
+    <!-- <form action="page.php" oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+            
+        <input type="range" id="a" name="a" value="50">+
+        <input type="number" id="b" name="b" value="50">
+    
+        <output name="x" for="a b"></output>
+        <br><br>
+        <input type="submit">
+        </form> -->
+
+</body>
+
+</html>
